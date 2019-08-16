@@ -12,7 +12,7 @@ Explore
 Learn Git and GitHub without any code!
 Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
 
- 
+``` 
 0
 0 0 lns13301/Minecraft-Commands
  Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
@@ -2040,6 +2040,7 @@ minecraft:iron_nugget{display:{Name:"{\"text\":\"1 마크\",\"color\":\"gold\",\
 
 /summon item 10015 66 10010 {Item:{id:"minecraft:cobblestone",Count:1b}}
 /kill @e[type=item,x=10015,y=65,z=10010,distance=..1]
+```
 © 2019 GitHub, Inc.
 Terms
 Privacy
