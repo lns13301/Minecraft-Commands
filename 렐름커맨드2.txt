@@ -1,0 +1,90 @@
+/scoreboard objectives add money dummy
+/scoreboard objectives add 1g dummy
+/scoreboard objectives add 10g dummy
+/scoreboard objectives add 100g dummy
+/scoreboard objectives add 1000g dummy
+/scoreboard objectives add 10000g dummy
+/scoreboard objectives add 100000g dummy
+/scoreboard objectives add 1mg dummy
+/scoreboard objectives add 10mg dummy
+/scoreboard objectives add 100mg dummy
+
+---------돈->스코어----------------
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"1 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 1g 1
+/scoreboard players add @a[scores={1g=1..}] money 1
+/clear @a[scores={1g=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"1G\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={1g=1..}] 1g 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"10 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 10g 1
+/scoreboard players add @a[scores={10g=1..}] money 10
+/clear @a[scores={10g=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"10 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={10g=1..}] 10g 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"100 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 100g 1
+/scoreboard players add @a[scores={100g=1..}] money 100
+/clear @a[scores={100g=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"100 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={100g=1..}] 100g 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"1,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 1000g 1
+/scoreboard players add @a[scores={1000g=1..}] money 1000
+/clear @a[scores={1000g=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"1,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={1000g=1..}] 1000g 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"10,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 10000g 1
+/scoreboard players add @a[scores={10000g=1..}] money 10000
+/clear @a[scores={10000g=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"10,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={10000g=1..}] 10000g 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"100,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 100000g 1
+/scoreboard players add @a[scores={100000g=1..}] money 100000
+/clear @a[scores={100000g=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"100,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={100000g=1..}] 100000g 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"1,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 1mg 1
+/scoreboard players add @a[scores={1mg=1..}] money 1
+/clear @a[scores={1mg=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"1,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={1mg=1..}] 1mg 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"10,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 10mg 1
+/scoreboard players add @a[scores={10mg=1..}] money 1
+/clear @a[scores={10mg=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"10,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={10mg=1..}] 10mg 1
+
+/scoreboard players add @a[nbt={Inventory:[{Slot:9b,id:"minecraft:iron_nugget",tag:{display:{Name:"{\"text\":\"100,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}}}]}] 100mg 1
+/scoreboard players add @a[scores={100mg=1..}] money 1
+/clear @a[scores={100mg=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"100,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @a[scores={100mg=1..}] 100mg 1
+
+------------스코어->돈--------------
+
+/give @p sign{BlockEntityTag:{Text1:"[\"\",{\"text\":\"돈 출금기\",\"color\":\"gold\",\"bold\":true,\"underlined\":true}]",Text2:"[\"\",{\"text\":\"좌측하단부터1G\",\"color\":\"red\",\"bold\":true}]",Text3:"[\"\",{\"text\":\"통장잔고는 플레이어\",\"color\":\"green\",\"bold\":true}]",Text4:"[\"\",{\"text\":\"정보 책으로 확인\",\"color\":\"green\",\"bold\":true}]",id:"Sign"}}
+
+-----------------------------------
+
+/give @p[scores={money=1..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"1 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=1..}] money 1
+
+/give @p[scores={money=10..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"10 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=10..}] money 10
+
+/give @p[scores={money=100..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"100 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=100..}] money 100
+
+/give @p[scores={money=1000..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"1,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=1000..}] money 1000
+
+/give @p[scores={money=10000..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"10,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=10000..}] money 10000
+
+/give @p[scores={money=100000..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"100,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=100000..}] money 100000
+
+/give @p[scores={money=1000000..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"1,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=1000000..}] money 1000000
+
+/give @p[scores={money=10000000..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"10,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=10000000..}] money 10000000
+
+/give @p[scores={money=100000000..}] minecraft:iron_nugget{display:{Name:"{\"text\":\"100,000,000 마크\",\"color\":\"gold\",\"bold\":\"true\"}"}} 1
+/scoreboard players remove @p[scores={money=100000000..}] money 100000000
